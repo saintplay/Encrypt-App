@@ -1,5 +1,5 @@
 var myApp;
-var $$ = Dom7;
+var $$;
 var mainView;
 
 
@@ -87,6 +87,8 @@ function onDeviceReady() {
         domCache: true
     });
 
+    $$ = Dom7;
+
     $$('.resultados-container').hide();
     $$('#codificacion-resultados').hide();
     generarTabla();
@@ -94,6 +96,8 @@ function onDeviceReady() {
     document.addEventListener("pause", onPause, false);
     document.addEventListener("resume", onResume, false);
     //Creamos el evento click que generará una nueva tabla
+    $$('a[href*=view-desencriptar]').touchend(() => { $$("#text-area-desencriptar").change(); })
+    $$('a[href*=view-comprimir]').touchend(() => { $$("#text-area-comprimir").change(); })
     activarEventos();
 }
 
@@ -369,6 +373,3 @@ function comprimirTexto(e) {
     $$('#text-area-comprimido-resultado').val(huffman_encoding_table.encode_text(texto_a_comprimir));
     $$('#text-area-comprimido-resultado').change();
 }
-
-$$('a[href*=view-desencriptar]').touchend(() => { $$("#text-area-desencriptar").change(); })
-$$('a[href*=view-comprimir]').touchend(() => { $$("#text-area-comprimir").change(); })

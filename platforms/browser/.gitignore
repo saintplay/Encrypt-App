@@ -1,0 +1,10 @@
+cordova/
+css/
+img/
+js/
+platform_www/
+res/
+browser.json
+config.xml
+index.html
+manifest.webapp

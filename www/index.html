@@ -42,7 +42,7 @@
 									<div class="item-content">
 						        <div class="item-inner">
 						          <div class="item-input">
-				              	<textarea id="text-area-encriptar" placeholder="Texto a encriptar"></textarea>
+				              	<textarea class="resizable" id="text-area-encriptar" placeholder="Texto a encriptar"></textarea>
 						          </div>
 						        </div>
 						      </div>
@@ -89,7 +89,7 @@
 									<div class="item-content">
 						        <div class="item-inner">
 						          <div class="item-input">
-				              	<textarea id="text-area-desencriptar" placeholder="Texto a desencriptar"></textarea>
+				              	<textarea class="resizable" id="text-area-desencriptar" placeholder="Texto a desencriptar"></textarea>
 						          </div>
 						        </div>
 						      </div>
@@ -163,7 +163,56 @@
             </div>
 
             <div class="page-content">
+
               <div class="content-block-title">Comprimir Archivo</div>
+              <div class="list-block">
+                <ul><li class="align-top">
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div class="item-input">
+                        <textarea class="resizable" id="text-area-comprimir" placeholder="Texto a comprimir" rows="20"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </li></ul>
+              </div>
+
+              <div id="codificacion-resultados" class="content-block-title">Codificación y Resultados</div>
+              <div class="list-block">
+                <div class="row">
+
+                  <div class="col-50">
+                    <ul><li class="align-top">
+                      <div class="item-content">
+                        <div class="item-inner">
+                          <div class="item-input">
+                            <textarea class="resizable" id="text-area-codificado" disabled="disabled" rows="10"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </li></ul>
+                  </div>
+
+                  <div class="col-50">
+                    <ul><li class="align-top">
+                      <div class="item-content">
+                        <div class="item-inner">
+                          <div class="item-input">
+                            <textarea class="resizable" id="text-area-comprimido-resultado" disabled="disabled" rows="10"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </li></ul>
+                  </div>
+
+                </div><!-- row -->
+              </div><!-- conten-block -->
+
+               <div class="content-block">
+                <div class="row">
+                  <div class="col-auto"><a id="boton-para-comprimir" class="button">Comprimir Texto</a></div>
+                </div>
+              </div>
 
             </div><!-- page-content -->
           </div><!-- page-index -->
@@ -188,12 +237,12 @@
               <div class="content-block-title"><u>¿Qué es Encrypt App?</u></div>
               <div class="content-block">
                 <p>Encrypt App es una aplicación multiplataforma académica que tiene como fin encriptar pequeños mensajes de texto
-                y comprimir archivos.</p>
+                y también comprimirlos.</p>
                 <p>Fue desarrollada para el curso de 4to ciclo Matemática Computacional (Profesor Luis Muñoz Ramos)
                 de la Universidad Peruana de Ciencias Aplicadas (UPC - Perú)</p>
                 <p>Encrypt App utiliza una tabla de encriptación basada en los caracteres ASCII más populares y
                 tiene la capacidad de generar nuevas tablas de forma aleatoria.</p>
-                <p>Encrypt App comprime los archivos con el algoritmo de Huffman.</p>
+                <p>Encrypt App comprime los textos con el algoritmo de Huffman.</p>
               </div>
 
               <div class="content-block-title"><u>Limitaciones</u></div>
@@ -220,7 +269,6 @@
                   <li><b>Icons: </b>Ionicons</li>
                   <li><b>Core: </b>Javascript</li>
                   <li><b>Control Version: </b>Git</li>
-                  <li><b>Huffman library: </b>Huffman_js</li>
                   <li><b>Resposible Table: </b>Bootstrap 3</li>
                   <li><b>Frontend Framework: </b>Framework7</li>
                   <li><b>Multiplatform Engine: </b>Apache Cordova</li>
@@ -271,6 +319,7 @@
 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="dist/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/huffman-encoder.js"></script>
     <script type="text/javascript" src="js/my-app.js"></script>
   </body>
 </html>

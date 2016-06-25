@@ -96,8 +96,8 @@ function onDeviceReady() {
     document.addEventListener("pause", onPause, false);
     document.addEventListener("resume", onResume, false);
     //Creamos el evento click que generará una nueva tabla
-    $$('a[href*=view-desencriptar]').touchend(() => { $$("#text-area-desencriptar").change(); })
-    $$('a[href*=view-comprimir]').touchend(() => { $$("#text-area-comprimir").change(); })
+    $$('a[href*=view-desencriptar]').touchend(function() { $$("#text-area-desencriptar").change(); })
+    $$('a[href*=view-comprimir]').touchend(function() { $$("#text-area-comprimir").change(); })
     activarEventos();
 }
 

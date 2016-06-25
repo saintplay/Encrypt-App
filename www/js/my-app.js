@@ -352,6 +352,11 @@ function comprimirTexto(e) {
     e.preventDefault();
     var texto_a_comprimir = $$('#text-area-comprimir').val();
 
+    if (!/\S/.test(texto_a_comprimir)) {
+        myApp.alert("No has ingresado ningún texto","¡Atención!");
+        return;
+    }
+
     if (texto_a_comprimir == previous_input) {
         return true;
     }

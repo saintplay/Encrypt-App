@@ -96,8 +96,8 @@ function onDeviceReady() {
     document.addEventListener("pause", onPause, false);
     document.addEventListener("resume", onResume, false);
     //Creamos el evento click que generará una nueva tabla
-    $$('a[href*=view-desencriptar]').touchend(() => { $$("#text-area-desencriptar").change(); })
-    $$('a[href*=view-comprimir]').touchend(() => { $$("#text-area-comprimir").change(); })
+    $$('a[href*=view-desencriptar]').touchend(function() { $$("#text-area-desencriptar").change(); })
+    $$('a[href*=view-comprimir]').touchend(function() { $$("#text-area-comprimir").change(); })
     activarEventos();
 }
 
@@ -351,6 +351,11 @@ function desencriptarTexto(e) {
 function comprimirTexto(e) {
     e.preventDefault();
     var texto_a_comprimir = $$('#text-area-comprimir').val();
+
+    if (!/\S/.test(texto_a_comprimir)) {
+        myApp.alert("No has ingresado ningún texto","¡Atención!");
+        return;
+    }
 
     if (texto_a_comprimir == previous_input) {
         return true;

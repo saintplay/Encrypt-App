@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Encrypt App</title>
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="dist/css/framework7.ios.min.css">
+		<link rel="stylesheet" href="dist/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="css/my-app.css">
+  </head>
+  <body onload="onLoad()">
+    <div class="statusbar-overlay"></div>
+    <div class="panel-overlay"></div>
+
+
+    <div class="views tabs toolbar-through">
+
+
+
+
+      <!-- Vista Encriptar -->
+      <div id="view-encriptar" class="view view-main tab active">
+
+        <div class="pages navbar-fixed">
+          <div data-page="page-encriptar" class="page">
+
+						<div class="navbar">
+              <div class="navbar-inner">
+                <div class="center">Encrypt App</div>
+              </div>
+            </div>
+
+            <div class="page-content">
+
+              <div class="content-block-title">Encriptar Texto</div>
+							<div class="list-block">
+								<ul><li class="align-top">
+									<div class="item-content">
+						        <div class="item-inner">
+						          <div class="item-input">
+				              	<textarea id="text-area-encriptar" placeholder="Texto a encriptar"></textarea>
+						          </div>
+						        </div>
+						      </div>
+								</li></ul>
+					    </div>
+
+							<div class="content-block">
+						    <div class="resultados-container">
+						    		<h4>Texto Encriptado:</h4>
+						        <p id="texto-encriptado"></p>
+						    </div>
+            	</div>
+
+              <div class="content-block">
+								<div class="row">
+                  <div class="col-auto"><a id="boton-para-encriptar" class="button">Encriptar</a></div>
+             		</div>
+              </div>
+
+            </div><!-- page-content -->
+          </div><!-- page-index -->
+        </div><!-- pages -->
+      </div><!-- view -->
+
+
+
+      <!-- Vista Desencriptar -->
+      <div id="view-desencriptar" class="view tab">
+
+        <div class="pages navbar-fixed">
+          <div data-page="page-index" class="page">
+
+						<div class="navbar">
+              <div class="navbar-inner">
+                <div class="center">Encrypt App</div>
+              </div>
+            </div>
+
+            <div class="page-content">
+
+              <div class="content-block-title">Desencriptar Texto</div>
+							<div class="list-block">
+								<ul><li class="align-top">
+									<div class="item-content">
+						        <div class="item-inner">
+						          <div class="item-input">
+				              	<textarea id="text-area-desencriptar" placeholder="Texto a desencriptar"></textarea>
+						          </div>
+						        </div>
+						      </div>
+								</li></ul>
+					    </div>
+
+							<div class="content-block">
+						    <div class="resultados-container">
+						    		<h4>Texto Desencriptado:</h4>
+						        <p id="texto-desencriptado"></p>
+						    </div>
+            	</div>
+
+              <div class="content-block">
+								<div class="row">
+                  <div class="col-auto"><a id="boton-para-desencriptar" class="button">Desencriptar</a></div>
+              	</div>
+              </div>
+
+            </div><!-- page-content -->
+          </div><!-- page-index -->
+        </div><!-- pages -->
+      </div><!-- view -->
+
+
+
+
+      <!-- Vista de la Tabla -->
+      <div id="view-tabla" class="view tab">
+
+        <div class="pages navbar-fixed">
+          <div data-page="page-tabla" class="page">
+
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="center">Encrypt App</div>
+              </div>
+            </div>
+
+            <div class="page-content">
+
+              <div class="content-block-title">Tabla de Encriptación</div>
+              <div class="content-block table-responsive">
+                <table id="tabla-de-papus" class="table table-bordered"></table>
+              </div>
+
+              <div class="content-block">
+                <div class="row">
+                  <div class="col-auto"><a id="boton-para-refrescar" class="button">Generar de nuevo</a></div>
+                </div>
+              </div>
+
+            </div><!-- page-content -->
+          </div><!-- page-index -->
+        </div><!-- pages -->
+      </div><!-- view -->
+
+
+
+
+      <!-- Vista de Comprimir -->
+      <div id="view-comprimir" class="view tab">
+
+        <div class="pages navbar-fixed">
+          <div data-page="page-index" class="page">
+
+						<div class="navbar">
+              <div class="navbar-inner">
+                <div class="center">Encrypt App</div>
+              </div>
+            </div>
+
+            <div class="page-content">
+              <div class="content-block-title">Comprimir Archivo</div>
+
+            </div><!-- page-content -->
+          </div><!-- page-index -->
+        </div><!-- pages -->
+      </div><!-- view -->
+
+
+
+       <!-- Vista de Acerca -->
+      <div id="view-acerca" class="view tab">
+
+        <div class="pages navbar-fixed">
+          <div data-page="page-acerca" class="page">
+
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="center">Encrypt App</div>
+              </div>
+            </div>
+
+            <div class="page-content">
+              <div class="content-block-title"><u>¿Qué es Encrypt App?</u></div>
+              <div class="content-block">
+                <p>Encrypt App es una aplicación multiplataforma académica que tiene como fin encriptar pequeños mensajes de texto
+                y comprimir archivos.</p>
+                <p>Fue desarrollada para el curso de 4to ciclo Matemática Computacional (Profesor Luis Muñoz Ramos)
+                de la Universidad Peruana de Ciencias Aplicadas (UPC - Perú)</p>
+                <p>Encrypt App utiliza una tabla de encriptación basada en los caracteres ASCII más populares y
+                tiene la capacidad de generar nuevas tablas de forma aleatoria.</p>
+                <p>Encrypt App comprime los archivos con el algoritmo de Huffman.</p>
+              </div>
+
+              <div class="content-block-title"><u>Limitaciones</u></div>
+              <div class="content-block">
+                <p>Si se quiere encriptar un texto, solo se podrán usar caracteres en
+                mayúscula del A al Z pasando por la Ñ, sin acentos</p>
+              </div>
+
+              <div class="content-block-title"><u>Integrantes</u></div>
+              <div class="content-block">
+                <ul>
+                  <li>Diego Jara <b>(Desarollador)</b></li>
+                  <li>Francis Marquez</li>
+                  <li>Alondra Rosas</li>
+                  <li>Hugo Rosado</li>
+                  <li>Percy Briceño</li>
+                </ul>
+              </div>
+
+              <div class="content-block-title"><u>Tecnología</u></div>
+              <div class="content-block">
+                <ul>
+                  <li><b>Layout: </b>HTML5</li>
+                  <li><b>Icons: </b>Ionicons</li>
+                  <li><b>Core: </b>Javascript</li>
+                  <li><b>Control Version: </b>Git</li>
+                  <li><b>Huffman library: </b>Huffman_js</li>
+                  <li><b>Resposible Table: </b>Bootstrap 3</li>
+                  <li><b>Frontend Framework: </b>Framework7</li>
+                  <li><b>Multiplatform Engine: </b>Apache Cordova</li>
+                </ul>
+              </div>
+
+              <div class="content-block-title"><u>Open-source</u></div>
+              <div class="content-block">
+                <p>El código de la aplicación es open source y está almacenado en
+                <a href="#" onclick="window.open('https://github.com/upclab/Encrypt-App', '_system');">Github</a>.</p>
+              </div>
+
+            </div><!-- page-content -->
+          </div><!-- page-index -->
+        </div><!-- pages -->
+      </div><!-- view -->
+
+
+
+
+			<!-- Bottom Tabbar-->
+      <div class="toolbar tabbar tabbar-labels">
+        <div class="toolbar-inner">
+          <a href="#view-encriptar" class="tab-link active">
+          	<i class="ion ion-ios-locked"></i>
+          	<span class="tabbar-label">Encriptar</span>
+          </a>
+          <a href="#view-desencriptar" class="tab-link">
+          	<i class="ion ion-ios-unlocked"></i>
+          	<span class="tabbar-label">Desencriptar</span>
+          </a>
+          <a href="#view-tabla" class="tab-link">
+            <i class="ion ion-lock-combination"></i>
+            <span class="tabbar-label">Tabla</span>
+          </a>
+          <a href="#view-comprimir" class="tab-link">
+          	<i class="ion ion-ios-circle-filled"></i>
+          	<span class="tabbar-label">Comprimir</span>
+          </a>
+          <a href="#view-acerca" class="tab-link">
+            <i class="ion ion-information-circled"></i>
+            <span class="tabbar-label">Acerca</span>
+          </a>
+        </div>
+      </div>
+
+    </div><!-- views -->
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="dist/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+  </body>
+</html>

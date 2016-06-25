@@ -79,21 +79,21 @@ function onDeviceReady() {
     document.addEventListener("pause", onPause, false);
     document.addEventListener("resume", onResume, false);
     //Creamos el evento click que generará una nueva tabla
-    $$('#boton-para-refrescar').on('click', generarNuevaTabla);
-    $$('#boton-para-encriptar').on('click', encriptarTexto);
-    $$('#boton-para-desencriptar').on('click', desencriptarTexto);
+    $$('#boton-para-refrescar').on('touchend', generarNuevaTabla);
+    $$('#boton-para-encriptar').on('touchend', encriptarTexto);
+    $$('#boton-para-desencriptar').on('touchend', desencriptarTexto);
 }
 
 function onPause() {
-    $$('#boton-para-refrescar').off('click', generarNuevaTabla);
-    $$('#boton-para-encriptar').off('click', encriptarTexto);
-    $$('#boton-para-desencriptar').off('click', desencriptarTexto);
+    $$('#boton-para-refrescar').off('touchend', generarNuevaTabla);
+    $$('#boton-para-encriptar').off('touchend', encriptarTexto);
+    $$('#boton-para-desencriptar').off('touchend', desencriptarTexto);
 }
 
 function onResume() {
-    $$('#boton-para-refrescar').on('click', generarNuevaTabla);
-    $$('#boton-para-encriptar').on('click', encriptarTexto);
-    $$('#boton-para-desencriptar').on('click', desencriptarTexto);
+    $$('#boton-para-refrescar').on('touchend', generarNuevaTabla);
+    $$('#boton-para-encriptar').on('touchend', encriptarTexto);
+    $$('#boton-para-desencriptar').on('touchend', desencriptarTexto);
 }
 
 
@@ -157,7 +157,9 @@ function generarTabla() {
 
 }
 
-function generarNuevaTabla() {
+function generarNuevaTabla(e) {
+
+    e.preventDefault();
 
     abecedario = [];
     var papus = [];
@@ -236,7 +238,9 @@ function vamo_a_desordenarno(arreglo) {
     }
 }
 
-function encriptarTexto(){
+function encriptarTexto(e) {
+
+    e.preventDefault();
     var texto = $$("#text-area-encriptar").val();
 
     if (!/\S/.test(texto)) {
@@ -272,7 +276,9 @@ function encriptarTexto(){
     $$("#text-area-desencriptar").val(texto_encriptado);
 }
 
-function desencriptarTexto(){
+function desencriptarTexto(e) {
+
+    e.preventDefault();
     var texto_encriptado = $$("#text-area-desencriptar").val();
 
     var texto_desencriptado = "";
@@ -309,6 +315,7 @@ function desencriptarTexto(){
     $$('#texto-desencriptado').text(texto_desencriptado);
 }
 
-$$('a[href*=view-comprimir]').click(function() {
+$$('a[href*=view-comprimir]').on('touchend', function(e) {
+    e.preventDefault();
     myApp.alert("Esta función todavía no está disponible", "¡Atención!");
 });

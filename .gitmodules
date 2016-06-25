@@ -1,4 +1,0 @@
-[submodule "gh-pages"]
-	path = platforms/browser/www
-	url = git@github.com:upclab/Encrypt-App.git
-	branch = gh-pages

@@ -1,5 +1,5 @@
 var myApp;
-var $$ = Dom7;
+var $$;
 var mainView;
 
 
@@ -63,6 +63,20 @@ function onLoad() {
     document.addEventListener("deviceready", onDeviceReady, false);
 }
 
+function activarEventos() {
+    $$('#boton-para-encriptar').on('touchend', encriptarTexto);
+    $$('#boton-para-desencriptar').on('touchend', desencriptarTexto);
+    $$('#boton-para-refrescar').on('touchend', generarNuevaTabla);
+    $$('#boton-para-comprimir').on('touchend', comprimirTexto);
+}
+
+function desactivarEventos() {
+    $$('#boton-para-encriptar').off('touchend', encriptarTexto);
+    $$('#boton-para-desencriptar').off('touchend', desencriptarTexto);
+    $$('#boton-para-refrescar').off('touchend', generarNuevaTabla);
+    $$('#boton-para-comprimir').off('touchend', comprimirTexto);
+}
+
 function onDeviceReady() {
     // Inicializando variables de Framework7
     myApp = new Framework7({
@@ -73,27 +87,26 @@ function onDeviceReady() {
         domCache: true
     });
 
+    $$ = Dom7;
+
     $$('.resultados-container').hide();
+    $$('#codificacion-resultados').hide();
     generarTabla();
 
     document.addEventListener("pause", onPause, false);
     document.addEventListener("resume", onResume, false);
     //Creamos el evento click que generará una nueva tabla
-    $$('#boton-para-refrescar').on('touchend', generarNuevaTabla);
-    $$('#boton-para-encriptar').on('touchend', encriptarTexto);
-    $$('#boton-para-desencriptar').on('touchend', desencriptarTexto);
+    $$('a[href*=view-desencriptar]').touchend(() => { $$("#text-area-desencriptar").change(); })
+    $$('a[href*=view-comprimir]').touchend(() => { $$("#text-area-comprimir").change(); })
+    activarEventos();
 }
 
 function onPause() {
-    $$('#boton-para-refrescar').off('touchend', generarNuevaTabla);
-    $$('#boton-para-encriptar').off('touchend', encriptarTexto);
-    $$('#boton-para-desencriptar').off('touchend', desencriptarTexto);
+    desactivarEventos();
 }
 
 function onResume() {
-    $$('#boton-para-refrescar').on('touchend', generarNuevaTabla);
-    $$('#boton-para-encriptar').on('touchend', encriptarTexto);
-    $$('#boton-para-desencriptar').on('touchend', desencriptarTexto);
+    activarEventos();
 }
 
 
@@ -248,13 +261,14 @@ function encriptarTexto(e) {
         return;
     }
 
-    texto = texto.toUpperCase();
+    var texto_uper_case = texto.toUpperCase();
+    var caracteres_no_aceptados = false;
 
     var texto_encriptado = "";
 
-    for (var i = 0; i < texto.length; i++) {
+    for (var i = 0; i < texto_uper_case.length; i++) {
 
-        var caracter = texto[i];
+        var caracter = texto_uper_case[i];
 
         if (caracter === " ") {
            texto_encriptado += " ";
@@ -262,18 +276,25 @@ function encriptarTexto(e) {
         } else if (caracter === "\n") {
             texto_encriptado += "\n";
             continue;
+        } else if (caracteres_aceptados.indexOf(caracter) == -1) {
+            texto_encriptado += " ";
+            caracteres_no_aceptados = true;
+            continue;
         }
 
         var index = caracteres_aceptados.indexOf(caracter);
         var caracter_encriptado = abecedario[index].shift(0);
         abecedario[index].push(caracter_encriptado);
-
         texto_encriptado += caracter_encriptado;
     }
+
+    if (caracteres_no_aceptados)
+        myApp.alert("Se han omitido algunos caracteres. Para esta opción no puedes usar acentos ni otros caracteres.","¡Cuidado!");
 
     $$('#view-encriptar').find('.resultados-container').show();
     $$('#texto-encriptado').text(texto_encriptado);
     $$("#text-area-desencriptar").val(texto_encriptado);
+    $$("#text-area-comprimir").val(texto);
 }
 
 function desencriptarTexto(e) {
@@ -282,6 +303,7 @@ function desencriptarTexto(e) {
     var texto_encriptado = $$("#text-area-desencriptar").val();
 
     var texto_desencriptado = "";
+    var caracteres_no_aceptados = false;
 
     if (!/\S/.test(texto_encriptado)) {
         myApp.alert("No has ingresado ningún texto","¡Atención!");
@@ -300,22 +322,54 @@ function desencriptarTexto(e) {
             continue;
         }
 
+        var caracter_encontrado = false;
+
         for (var i=0; i < abecedario.length; i++) {
 
             var letra = abecedario[i];
 
             if(letra.indexOf(caracter) > -1) {
                texto_desencriptado += caracteres_aceptados[i];
+               caracter_encontrado = true;
                break;
             }
         }
+
+        if (!caracter_encontrado) {
+            texto_desencriptado += " ";
+            caracteres_no_aceptados = true;
+        }
     }
+
+    if (caracteres_no_aceptados)
+        myApp.alert("Si ves este mensaje, no se encripto adecuadamente el texto. Por favor envía capturas del texto y de la tabla al desarollador","WTF");
 
     $$('#view-desencriptar').find('.resultados-container').show();
     $$('#texto-desencriptado').text(texto_desencriptado);
 }
 
-$$('a[href*=view-comprimir]').on('touchend', function(e) {
+function comprimirTexto(e) {
     e.preventDefault();
-    myApp.alert("Esta función todavía no está disponible", "¡Atención!");
-});
+    var texto_a_comprimir = $$('#text-area-comprimir').val();
+
+    if (texto_a_comprimir == previous_input) {
+        return true;
+    }
+
+    previous_input = texto_a_comprimir;
+
+    var character_frequency_hash = populate_character_frequency_hash(texto_a_comprimir);
+    var huffman_priority_queue = fill_huffman_priority_queue(character_frequency_hash);
+    var huffman_tree = build_huffman_tree(huffman_priority_queue);
+    var huffman_encoding_table = new Huffman_Encoding_Table();
+    huffman_encoding_table.generate_encoding_table_recursively(huffman_tree);
+
+    $$('#codificacion-resultados').show();
+
+    $$('#text-area-codificado').val(huffman_encoding_table.toString());
+    $$("#text-area-codificado").change();
+
+    huffman_encoding_table.set_character_encoding_hash();
+    $$('#text-area-comprimido-resultado').val(huffman_encoding_table.encode_text(texto_a_comprimir));
+    $$('#text-area-comprimido-resultado').change();
+}

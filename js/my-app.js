@@ -64,17 +64,17 @@ function onLoad() {
 }
 
 function activarEventos() {
-    $$('#boton-para-encriptar').on('touchend', encriptarTexto);
-    $$('#boton-para-desencriptar').on('touchend', desencriptarTexto);
-    $$('#boton-para-refrescar').on('touchend', generarNuevaTabla);
-    $$('#boton-para-comprimir').on('touchend', comprimirTexto);
+    $$('#boton-para-encriptar').on('click', encriptarTexto);
+    $$('#boton-para-desencriptar').on('click', desencriptarTexto);
+    $$('#boton-para-refrescar').on('click', generarNuevaTabla);
+    $$('#boton-para-comprimir').on('click', comprimirTexto);
 }
 
 function desactivarEventos() {
-    $$('#boton-para-encriptar').off('touchend', encriptarTexto);
-    $$('#boton-para-desencriptar').off('touchend', desencriptarTexto);
-    $$('#boton-para-refrescar').off('touchend', generarNuevaTabla);
-    $$('#boton-para-comprimir').off('touchend', comprimirTexto);
+    $$('#boton-para-encriptar').off('click', encriptarTexto);
+    $$('#boton-para-desencriptar').off('click', desencriptarTexto);
+    $$('#boton-para-refrescar').off('click', generarNuevaTabla);
+    $$('#boton-para-comprimir').off('click', comprimirTexto);
 }
 
 function onDeviceReady() {
@@ -96,8 +96,8 @@ function onDeviceReady() {
     document.addEventListener("pause", onPause, false);
     document.addEventListener("resume", onResume, false);
     //Creamos el evento click que generará una nueva tabla
-    $$('a[href*=view-desencriptar]').touchend(function() { $$("#text-area-desencriptar").change(); })
-    $$('a[href*=view-comprimir]').touchend(function() { $$("#text-area-comprimir").change(); })
+    $$('a[href*=view-desencriptar]').click(function() { $$("#text-area-desencriptar").change(); })
+    $$('a[href*=view-comprimir]').click(function() { $$("#text-area-comprimir").change(); })
     activarEventos();
 }
 

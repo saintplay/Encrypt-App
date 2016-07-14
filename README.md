@@ -2,6 +2,8 @@
   <img src=https://cloud.githubusercontent.com/assets/9372893/16830766/79427dac-4966-11e6-8a03-f29f8e9f9ff4.png>
 </div>
 
+---
+
 | Web | Android | iOS | Windows Phone |
 |:---------:|:-------------:|:---------:|:-------------------:|
 | **v1.0.1** | **v1.0.1** | *No Disponible* | *No Disponible* |

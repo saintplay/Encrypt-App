@@ -2,7 +2,7 @@
 <widget id="com.upc.upclab.encryptapp" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Encrypt-App</name>
     <description>
-    Aplicación académica para encriptar y comprimir texto.
+        Aplicación académica para encriptar y comprimir texto.
     </description>
     <author email="saintplay96@gmail.com" href="http://github.com/saintplay">
         Diego Jara Palomino
@@ -15,4 +15,5 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <icon src="res/android/logo-xhdpi.png" />
 </widget>

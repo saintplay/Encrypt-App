@@ -8,7 +8,6 @@
         Diego Jara Palomino
     </author>
     <content src="index.html" />
-    <plugin name="cordova-plugin-whitelist" spec="1" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -16,26 +15,21 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-
     <icon src="res/android/logo-xhdpi.png" />
-
     <platform name="android">
         <allow-intent href="market:*" />
-
-        <icon src="res/android/logo-mdpi.png" density="mdpi" />
-        <icon src="res/android/logo-hdpi.png" density="hdpi" />
-        <icon src="res/android/logo-xhdpi.png" density="xhdpi" />
-        <icon src="res/android/logo-xxhdpi.png" density="xxhdpi" />
-
-        <splash src="res/screen/android/mdpi.9.png" density="mdpi" />
-        <splash src="res/screen/android/hdpi.9.png" density="hdpi" />
-        <splash src="res/screen/android/xhdpi.9.png" density="xhdpi" />
-        <splash src="res/screen/android/xxhdpi.9.png" density="xxhdpi" />
-
+        <icon density="mdpi" src="res/android/logo-mdpi.png" />
+        <icon density="hdpi" src="res/android/logo-hdpi.png" />
+        <icon density="xhdpi" src="res/android/logo-xhdpi.png" />
+        <icon density="xxhdpi" src="res/android/logo-xxhdpi.png" />
+        <splash density="mdpi" src="res/screen/android/mdpi.9.png" />
+        <splash density="hdpi" src="res/screen/android/hdpi.9.png" />
+        <splash density="xhdpi" src="res/screen/android/xhdpi.9.png" />
+        <splash density="xxhdpi" src="res/screen/android/xxhdpi.9.png" />
         <preference name="SplashScreenDelay" value="3000" />
     </platform>
-
-    <engine name="android" spec="~5.1.1" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
     <plugin name="cordova-plugin-inappbrowser" spec="~1.4.0" />
     <engine name="browser" spec="~4.1.0" />
+    <engine name="android" spec="~5.1.1" />
 </widget>

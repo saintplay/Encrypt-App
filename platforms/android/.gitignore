@@ -13,6 +13,9 @@ out
 # Gradle builds
 /build
 # Auto-generated Files
+settings.gradle
+build.gradle
+project.properties
 cordova/
 www/
 platform_www/

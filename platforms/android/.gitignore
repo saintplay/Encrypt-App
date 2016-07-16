@@ -16,9 +16,11 @@ out
 settings.gradle
 build.gradle
 project.properties
-cordova/
-www/
-platform_www/
-CordovaLib/
-res/
-.gradle/
+/cordova/
+/assets/
+/src/
+/www/
+/platform_www/
+/CordovaLib/
+/res/
+/.gradle/

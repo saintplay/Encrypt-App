@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.upc.upclab.encryptapp" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.upc.upclab.encryptapp" version="1.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Encrypt-App</name>
     <description>
         Aplicación académica para encriptar y comprimir texto.
@@ -16,4 +16,7 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <icon src="res/android/logo-xhdpi.png" />
+    <preference name="SplashScreenDelay" value="0" />
+    <preference name="FadeSplashScreenDuration" value="0" />
+    <preference name="FadeSplashScreen" value="false" />
 </widget>

@@ -6,8 +6,8 @@
 
 | Web | Android | iOS | Windows Phone |
 |:---------:|:-------------:|:---------:|:-------------------:|
-| **v1.0.1** | **v1.0.1** | *No Disponible* | *No Disponible* |
-| [Probar](https://upclab.github.io/Encrypt-App/) | [Descargar](https://github.com/upclab/Encrypt-App/releases/download/v1.0.1/EncryptApp1.0.1.apk) | - | - |
+| **v1.0.1** | **v1.0.2** | *No Disponible* | *No Disponible* |
+| [Probar](https://upclab.github.io/Encrypt-App/) | [Descargar](https://github.com/upclab/Encrypt-App/releases/download/v1.0.2/EncryptApp1.0.2.apk) | - | - |
 
 ## ¿QUÉ ES ENCRYPT APP?
 **Encrypt App** es una aplicación multiplataforma académica que tiene como fin encriptar pequeños mensajes de texto y también comprimirlos. 

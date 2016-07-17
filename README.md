@@ -17,6 +17,24 @@ Aplicadas (**UPC** - **Perú**)
 Encrypt App utiliza una [tabla de encriptación](https://gist.github.com/saintplay/c5d54d4c3a6f06366f35ddb9ebb996d5) basada en los caracteres ASCII más populares y tiene la capacidad de generar nuevas tablas de forma aleatoria.
 Encrypt App comprime los textos con el [algoritmo de Huffman](https://es.wikipedia.org/wiki/Algoritmo_de_Huffman).
 
+## Protege mensajes y desencríptalos en otros dispositivos
+
+<div align="center">
+  <img src="https://cloud.githubusercontent.com/assets/9372893/16898889/b41f8ba6-4bb2-11e6-9499-abed56f3a5a6.png">
+</div>
+
+## Tablas personalizables para encriptar
+
+<div align="center">
+  <img src="https://cloud.githubusercontent.com/assets/9372893/16899020/6f9ec2b0-4bb9-11e6-8711-b7554bb9c3dc.png">
+</div>
+
+## Comprime Texto
+
+<div align="center">
+  <img src="https://cloud.githubusercontent.com/assets/9372893/16899129/1ccaaa2c-4bbe-11e6-949b-e40b436e33f9.png">
+</div>
+
 ## CREADORES
 
 - Diego Jara **(UPC Lab Staff)**
@@ -24,12 +42,6 @@ Encrypt App comprime los textos con el [algoritmo de Huffman](https://es.wikiped
 - Alondra Rosas
 - Hugo Rosado
 - Percy Briceño
-
-
-<div align="center">
-  <img src="https://cloud.githubusercontent.com/assets/9372893/16879913/501dca4a-4a78-11e6-9783-3600e0b260d8.png">
-</div>
-
 
 ## TECNOLOGÍA
 - **Layout**: [HTML5](https://developer.mozilla.org/es/docs/Web/Guide/HTML/Introduction_alhtml)
@@ -49,7 +61,7 @@ Puedes probar la versión Web, desde tu computadora o desde tu móvil con este l
 #### ¿CUÁLES SON LAS LIMITACIONES?
 - Para encriptar textos, solo podrás usar letras del abecedario espa**ñ**ol(no se aceptan acentos ni números).
 - La desencriptación siempre devolverá el texto en mayúscula.
-- Una vez que se cambie la [tabla de encriptación](#Tabla De Encriptacion), no se podrá obtener el texto desencriptado desde otro
+- Una vez que se cambie la [tabla de encriptación](#Tablas-personalizables-para-encriptar), no se podrá obtener el texto desencriptado desde otro
 dispositivo, a menos el otro dispositivo tenga exactamente la misma tabla(lo cual es poco probable). 
 
 #### ¿Y, LAS OTRAS PLATAFORMAS?
@@ -75,3 +87,8 @@ Por la presente se autoriza, de forma gratuita, a cualquier persona que haya obt
 El aviso de copyright anterior y este aviso de permiso tendrán que ser incluidos en todas las copias o partes sustanciales del Software.
 
 EL SOFTWARE SE ENTREGA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, YA SEA EXPRESA O IMPLÍCITA, INCLUYENDO, A MODO ENUNCIATIVO, CUALQUIER GARANTÍA DE COMERCIABILIDAD, IDONEIDAD PARA UN FIN PARTICULAR Y NO INFRACCIÓN. EN NINGÚN CASO LOS AUTORES O TITULARES DEL COPYRIGHT INCLUIDOS EN ESTE AVISO SERÁN RESPONSABLES DE NINGUNA RECLAMACIÓN, DAÑOS U OTRAS RESPONSABILIDADES, YA SEA EN UN LITIGIO, AGRAVIO O DE OTRO MODO, RESULTANTES DE O EN CONEXION CON EL SOFTWARE, SU USO U OTRO TIPO DE ACCIONES EN EL SOFTWARE.
+
+<div align="center">
+  <img src="https://cloud.githubusercontent.com/assets/9372893/16879913/501dca4a-4a78-11e6-9783-3600e0b260d8.png">
+</div>
+

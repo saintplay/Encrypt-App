@@ -1,5 +1,5 @@
 <div align="center">
-  <img src=https://cloud.githubusercontent.com/assets/9372893/16830766/79427dac-4966-11e6-8a03-f29f8e9f9ff4.png>
+  <img src="https://cloud.githubusercontent.com/assets/9372893/16898315/85e485d4-4b99-11e6-88b4-046c44b3b5ae.png">
 </div>
 
 ---
@@ -19,16 +19,17 @@ Encrypt App comprime los textos con el [algoritmo de Huffman](https://es.wikiped
 
 ## CREADORES
 
-<div align="center">
-  <img src="https://cloud.githubusercontent.com/assets/9372893/16879913/501dca4a-4a78-11e6-9783-3600e0b260d8.png">
-</div>
-
-
 - Diego Jara **(UPC Lab Staff)**
 - Francis Marquez
 - Alondra Rosas
 - Hugo Rosado
 - Percy Briceño
+
+
+<div align="center">
+  <img src="https://cloud.githubusercontent.com/assets/9372893/16879913/501dca4a-4a78-11e6-9783-3600e0b260d8.png">
+</div>
+
 
 ## TECNOLOGÍA
 - **Layout**: [HTML5](https://developer.mozilla.org/es/docs/Web/Guide/HTML/Introduction_alhtml)
@@ -52,7 +53,7 @@ Puedes probar la versión Web, desde tu computadora o desde tu móvil con este l
 dispositivo, a menos el otro dispositivo tenga exactamente la misma tabla(lo cual es poco probable). 
 
 #### ¿Y, LAS OTRAS PLATAFORMAS?
-- Se planeó desarrollar la aplicación solo para Android. Sin embargo, si estás interesado/a, podemos liberar una versión para otra plataforma. :wink:
+Se planeó desarrollar la aplicación solo para Android. Sin embargo, si estás interesado/a, podemos liberar una versión para otra plataforma. :wink:
 
 #### ¿QUÉ ES UPC LAB?
 > Somos un grupo de  de gente apasionada por la tecnología, que nos gusta desarrollar aplicaciones de todo tipo.

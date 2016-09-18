@@ -72,7 +72,7 @@ Se planeó desarrollar la aplicación solo para Android. Sin embargo, si estás 
 > También ayudamos y hacemos aplicaciones, si quieres más información escribe a: <saintplay96@gmail.com>.
 
 #### TENGO OTRA PREGUNTA, IDEA O SUGERENCIA
-Eres más que bienvenido/a para contribuir o para preguntar otras cosas. Puedes abrir un *issue(si es que sabes usar GitHub)* o puedes enviar un correo a <saintplay96@gmail.com>.
+Eres más que bienvenido/a para contribuir o para preguntar otras cosas. Puedes abrir un *issue(si es que sabes usar GitHub)* o puedes enviar un correo a <upclabperu@gmail.com>.
 
 ***
   

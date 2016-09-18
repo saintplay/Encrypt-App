@@ -61,7 +61,7 @@ Puedes probar la versión Web, desde tu computadora o desde tu móvil con este l
 #### ¿CUÁLES SON LAS LIMITACIONES?
 - Para encriptar textos, solo podrás usar letras del abecedario espa**ñ**ol(no se aceptan acentos ni números).
 - La desencriptación siempre devolverá el texto en mayúscula.
-- Una vez que se cambie la [tabla de encriptación](#Tablas-personalizables-para-encriptar), no se podrá obtener el texto desencriptado desde otro
+- Una vez que se cambie la [tabla de encriptación](#tablas-personalizables-para-encriptar), no se podrá obtener el texto desencriptado desde otro
 dispositivo, a menos el otro dispositivo tenga exactamente la misma tabla(lo cual es poco probable). 
 
 #### ¿Y, LAS OTRAS PLATAFORMAS?

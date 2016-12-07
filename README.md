@@ -7,7 +7,7 @@
 | Web | Android | iOS | Windows Phone |
 |:---------:|:-------------:|:---------:|:-------------------:|
 | **v1.0.2** | **v1.0.2** | *No Disponible* | *No Disponible* |
-| [Probar](https://upclab.github.io/Encrypt-App/) | [Descargar](https://github.com/upclab/Encrypt-App/releases/download/v1.0.2/EncryptApp1.0.2.apk) | - | - |
+| [Probar](https://saintplay.github.io/Encrypt-App/) | [Descargar](https://github.com/upclab/Encrypt-App/releases/download/v1.0.2/EncryptApp1.0.2.apk) | - | - |
 
 ## ¿QUÉ ES ENCRYPT APP?
 **Encrypt App** es una aplicación multiplataforma académica que tiene como fin encriptar pequeños mensajes de texto y también comprimirlos. 
@@ -56,7 +56,7 @@ Encrypt App comprime los textos con el [algoritmo de Huffman](https://es.wikiped
 ## PREGUNTAS FRECUENTES
 
 #### QUIERO PROBAR LA APLICACIÓN, PERO NO QUIERO INSTALAR NADA
-Puedes probar la versión Web, desde tu computadora o desde tu móvil con este link: <https://upclab.github.io/Encrypt-App/>
+Puedes probar la versión Web, desde tu computadora o desde tu móvil con este link: <https://saintplay.github.io/Encrypt-App/>
 
 #### ¿CUÁLES SON LAS LIMITACIONES?
 - Para encriptar textos, solo podrás usar letras del abecedario espa**ñ**ol(no se aceptan acentos ni números).
@@ -80,7 +80,7 @@ Eres más que bienvenido/a para contribuir o para preguntar otras cosas. Puedes 
 
 The MIT License (MIT)
 
-Copyright (c) 2016 UPC Lab
+Copyright (c) 2016 Diego Jara
 
 Por la presente se autoriza, de forma gratuita, a cualquier persona que haya obtenido una copia de este software y archivos de documentación asociados (el "Software"), a utilizar el Software sin restricción, incluyendo sin limitación los derechos de usar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar, y/o vender copias de este Software, y permitir lo mismo a las personas a las que se les proporcione el Software, de acuerdo con las siguientes condiciones:
 

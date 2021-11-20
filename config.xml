@@ -4,8 +4,8 @@
     <description>
         Aplicación académica para encriptar y comprimir texto.
     </description>
-    <author email="saintplay96@gmail.com" href="http://github.com/saintplay">
-        Diego Jara Palomino
+    <author email="diegojara6@gmail.com" href="http://github.com/saintplay">
+        Diego Jara
     </author>
     <content src="index.html" />
     <access origin="*" />
